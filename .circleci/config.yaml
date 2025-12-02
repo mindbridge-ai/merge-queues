@@ -1,0 +1,13 @@
+
+jobs:
+  test:
+    docker:
+    - image: cimg/base:stable
+    steps:
+      - checkout
+      - run:
+          command: sleep 5m
+workflows:
+  version: 2
+  test:
+    jobs: [test]
